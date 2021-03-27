@@ -18,6 +18,7 @@ import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import javax.imageio.ImageIO;
 import javax.swing.border.Border;
+
 import net.coobird.thumbnailator.Thumbnails;
 
 public class application extends JFrame {
@@ -78,7 +79,7 @@ public class application extends JFrame {
         html_text_Label.setFont(font);
         information_Panel.add(html_text_Label); // Add text to info panel
         final JButton button_theme = new JButton("Theme"); // Create button to change theme
-        button_theme.setBackground(new Color(150,150,255));
+        button_theme.setBackground(new Color(150, 150, 255));
         button_theme.setForeground(Color.WHITE);
         button_theme.setFont(new Font("SansSerif", Font.PLAIN, 12)); // Set text view
         button_theme.setPreferredSize(new Dimension(90, 20)); // Button size
@@ -97,8 +98,7 @@ public class application extends JFrame {
                 button_theme.setText("Bright theme"); // Change text on button
                 button_theme.setForeground(Color.WHITE); // Change text color on button
                 current_theme.set(0); // Change theme identifier
-            }
-            else {
+            } else {
                 try {
                     UIManager.setLookAndFeel("com.jtattoo.plaf.aluminium.AluminiumLookAndFeel"); // Change theme of application
                 } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
@@ -130,8 +130,7 @@ public class application extends JFrame {
                         Toolkit.getDefaultToolkit().beep(); // Default sound of system
                         JOptionPane.showMessageDialog(null, error);
                     });
-                }
-                else {
+                } else {
                     // Remember images that we read
                     while (i < l) {
                         BufferedImage bi = null;
@@ -227,13 +226,10 @@ public class application extends JFrame {
                 color[2] = what(lab2[1], lab2[2]);
                 if (color[0] + color[1] + color[2] >= 5) {
                     answer = "Ripe Apple!";
-                }
-                else
-                {
+                } else {
                     if (color[0] + color[1] + color[2] >= 2) {
                         answer = "Medium Ripe Apple!";
-                    }
-                    else
+                    } else
                         answer = "WARNING! Unripe Apple!";
                 }
             }
@@ -242,13 +238,10 @@ public class application extends JFrame {
                 color[1] = what(lab1[1], lab1[2]);
                 if (color[0] + color[1] == 4) {
                     answer = "Ripe Apple!";
-                }
-                else
-                {
+                } else {
                     if (color[0] + color[1] >= 2) {
                         answer = "Medium Ripe Apple!";
-                    }
-                    else
+                    } else
                         answer = "WARNING! Unripe Apple!";
                 }
             }
@@ -256,13 +249,10 @@ public class application extends JFrame {
                 color[0] = what(lab0[1], lab0[2]);
                 if (color[0] == 2) {
                     answer = "Ripe Apple!";
-                }
-                else
-                {
+                } else {
                     if (color[0] == 1) {
                         answer = "Medium Ripe Apple!";
-                    }
-                    else
+                    } else
                         answer = "WARNING! Unripe Apple!";
                 }
             }
@@ -310,7 +300,7 @@ public class application extends JFrame {
         colorList.sort((o1, o2) -> ((Comparable<Integer>) o1.getValue()).compareTo(o2.getValue()));
         Map.Entry<Integer, Integer> mapEntry = colorList.get(colorList.size() - 1);
         int[] rgb = getRGBArr(mapEntry.getKey());
-        return new int[] {rgb[0], rgb[1], rgb[2]};
+        return new int[]{rgb[0], rgb[1], rgb[2]};
     }
 
     // Method that translate pixel to RGB array
@@ -318,7 +308,7 @@ public class application extends JFrame {
         int red = (pixel >> 16) & 0xff;
         int green = (pixel >> 8) & 0xff;
         int blue = (pixel) & 0xff;
-        return new int[] {red, green, blue};
+        return new int[]{red, green, blue};
     }
 
     // Method that throws out white/gray/black colors
@@ -380,23 +370,23 @@ public class application extends JFrame {
         as = (int) as;
         bs = (int) bs;
 
-        return new double[] {Ls, as, bs};
+        return new double[]{Ls, as, bs};
     }
 
     // Method that by LAB coordinates define green/yellow/red color
-    private static int what (double color1, double color2) {
-            // Green
-            if (color2 <= color1 * (-3) && color2 >= color1 && color1 < 0) {
-                return 0;
-            }
-            // Yellow
-            if (color2 >= color1 * 2 && color2 >= color1 * (-3) && color2 > 0) {
-                return  1;
-            }
-            // Red
-            if (color2 <= color1 * 2 && color2 >= color1 * (-1) && color1 > 0) {
-                return  2;
-            }
+    private static int what(double color1, double color2) {
+        // Green
+        if (color2 <= color1 * (-3) && color2 >= color1 && color1 < 0) {
             return 0;
+        }
+        // Yellow
+        if (color2 >= color1 * 2 && color2 >= color1 * (-3) && color2 > 0) {
+            return 1;
+        }
+        // Red
+        if (color2 <= color1 * 2 && color2 >= color1 * (-1) && color1 > 0) {
+            return 2;
+        }
+        return 0;
     }
 }
