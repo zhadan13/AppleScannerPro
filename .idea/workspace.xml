@@ -9,13 +9,8 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0236a36a-f035-4bcb-af48-94f329413bc4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Artem.xml" beforeDir="false" />
+    <list default="true" id="0236a36a-f035-4bcb-af48-94f329413bc4" name="Default Changelist" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voice.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/voice.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voice2.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/voice2.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voice3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/voice3.wav" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,17 +97,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -138,8 +122,17 @@
       <option name="presentableId" value="Default" />
       <updated>1570655104084</updated>
       <workItem from="1616840386783" duration="62000" />
-      <workItem from="1616840509615" duration="475000" />
+      <workItem from="1616840509615" duration="602000" />
+      <workItem from="1619717266551" duration="48000" />
     </task>
+    <task id="LOCAL-00001" summary="update">
+      <created>1616841082493</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1616841082493</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,5 +149,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>
